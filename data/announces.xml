@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<announce>Welcome to AtlasCore Tera Online Server</announce>
+	<announce>Put your announcement here</announce>
+	<announce interval="1400000" >Put your announcement here</announce>
+	<announce interval="900000" >Put your announcement here</announce>
+	<announce interval="600000" >Put your announcement here</announce>
+	<announce interval="900000" >Put your announcement here</announce>
+</list>

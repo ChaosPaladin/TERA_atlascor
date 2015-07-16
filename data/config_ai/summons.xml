@@ -1,0 +1,239 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<config name="thrall_of_protection" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="SummonWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+				<set name="messageInterval" val="60000" />
+				<set name="walkMessage" val="thrall_of_protection_walk" />
+				<set name="followMessage" val="thrall_of_protection_follow" />
+			</task>
+			<task state="RETURN_TO_HOME" factory="SummonReturnTaskFactory" >
+				<set name="messageInterval" val="60000" />
+				<set name="returnMessages" val="thrall_of_protection_return" />
+			</task>
+			<task state="IN_BATTLE" factory="SummonBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="30" />
+				<set name="BUFF" val="30" />
+				<set name="DEBUFF" val="30" />
+				<set name="SHIELD" val="100" />
+				<set name="messageInterval" val="60000" />
+				<set name="buffMessages" val="thrall_of_protection_buff" />
+				<set name="debuffMesages" val="thrall_of_protection_debuff" />
+				<set name="shieldMessages" val="thrall_of_protection_shield" />
+				<set name="attackMessages" val="thrall_of_protection_attack" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="SummonWaitAction" >
+				<set name="maxDistance" val="600" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</think>
+			<think state="RETURN_TO_HOME" action="SummonReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+				<set name="distanceToTeleport" val="5000" />
+			</think>
+			<think state="IN_BATTLE" action="SummonBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+			</think>
+		</thinks>
+	</config>
+	<config name="thrall_of_vengeance" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="SummonWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+				<set name="messageInterval" val="60000" />
+				<set name="walkMessage" val="thrall_of_vengeance_walk" />
+				<set name="followMessage" val="thrall_of_vengeance_follow" />
+			</task>
+			<task state="RETURN_TO_HOME" factory="SummonReturnTaskFactory" >
+				<set name="messageInterval" val="60000" />
+				<set name="returnMessages" val="thrall_of_vengeance_return" />
+			</task>
+			<task state="IN_BATTLE" factory="SummonRangeBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="20" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="BUFF" val="40" />
+				<set name="TRAP" val="30" />
+				<set name="JUMP" val="100" />
+				<set name="messageInterval" val="60000" />
+				<set name="buffMessages" val="thrall_of_vengeance_buff" />
+				<set name="attackMessages" val="thrall_of_vengeance_attack" />
+				<set name="shortRange" val="100" />
+				<set name="runAwayRate" val="40" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="SummonWaitAction" >
+				<set name="maxDistance" val="600" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</think>
+			<think state="RETURN_TO_HOME" action="SummonReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+				<set name="distanceToTeleport" val="5000" />
+			</think>
+			<think state="IN_BATTLE" action="SummonBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+			</think>
+		</thinks>
+	</config>
+	<config name="thrall_of_wrath" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="SummonWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+				<set name="messageInterval" val="60000" />
+				<set name="walkMessage" val="thrall_of_wrath_walk" />
+				<set name="followMessage" val="thrall_of_wrath_follow" />
+			</task>
+			<task state="RETURN_TO_HOME" factory="SummonReturnTaskFactory" >
+				<set name="messageInterval" val="60000" />
+				<set name="returnMessages" val="thrall_of_wrath_return" />
+			</task>
+			<task state="IN_BATTLE" factory="SummonBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="BUFF" val="20" />
+				<set name="JUMP" val="50" />
+				<set name="messageInterval" val="60000" />
+				<set name="buffMessages" val="thrall_of_wrath_buff" />
+				<set name="attackMessages" val="thrall_of_wrath_attack" />
+				<set name="evasionMessages" val="thrall_of_wrath_evasion" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="SummonWaitAction" >
+				<set name="maxDistance" val="600" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</think>
+			<think state="RETURN_TO_HOME" action="SummonReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+				<set name="distanceToTeleport" val="5000" />
+			</think>
+			<think state="IN_BATTLE" action="SummonBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+			</think>
+		</thinks>
+	</config>
+	<config name="thrall_of_life" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="SummonHealWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+				<set name="messageInterval" val="60000" />
+				<set name="walkMessage" val="thrall_of_life_walk" />
+				<set name="followMessage" val="thrall_of_life_follow" />
+				<set name="buffMessages" val="thrall_of_life_buff" />
+				<set name="healMessages" val="thrall_of_life_heal" />
+				<set name="BUFF" val="20" />
+				<set name="HEAL" val="50" />
+			</task>
+			<task state="RETURN_TO_HOME" factory="SummonReturnTaskFactory" >
+				<set name="messageInterval" val="60000" />
+				<set name="returnMessages" val="thrall_of_life_return" />
+			</task>
+			<task state="IN_BATTLE" factory="SummonRangeBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="20" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="BUFF" val="30" />
+				<set name="HEAL" val="100" />
+				<set name="JUMP" val="100" />
+				<set name="messageInterval" val="60000" />
+				<set name="buffMessages" val="thrall_of_life_buff" />
+				<set name="healMessages" val="thrall_of_life_heal" />
+				<set name="attackMessages" val="thrall_of_life_attack" />
+				<set name="evasionMessages" val="thrall_of_life_evasion" />
+				<set name="shortRange" val="100" />
+				<set name="runAwayRate" val="40" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="SummonWaitAction" >
+				<set name="maxDistance" val="600" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</think>
+			<think state="RETURN_TO_HOME" action="SummonReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+				<set name="distanceToTeleport" val="5000" />
+			</think>
+			<think state="IN_BATTLE" action="SummonBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+			</think>
+		</thinks>
+	</config>
+	<config name="smoke_aggressor" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="SummonWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</task>
+			<task state="RETURN_TO_HOME" factory="SummonReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="SummonBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="30" />
+				<set name="JUMP" val="90" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="SummonWaitAction" >
+				<set name="maxDistance" val="600" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="10000" />
+			</think>
+			<think state="RETURN_TO_HOME" action="SummonReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+				<set name="distanceToTeleport" val="5000" />
+			</think>
+			<think state="IN_BATTLE" action="SummonBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+			</think>
+		</thinks>
+	</config>
+</list>

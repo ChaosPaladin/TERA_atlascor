@@ -1,0 +1,653 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<config name="Default" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="250" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="150" />
+				<set name="randomWalkMaxRange" val="250" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="250" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" />
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="250" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="shortRange" val="300" />
+				<set name="criticalHp" val="30" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="0" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" />
+		</thinks>
+	</config>
+	<config name="DefaultFriendly" >
+		<intervals default="600000" />
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" />
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" />
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" />
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="NoWaitAction" />
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" />
+			<think state="IN_BATTLE" action="NoBattleAction" />
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" />
+		</thinks>
+	</config>
+	<config name="DefaultElite" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="250" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="150" />
+				<set name="randomWalkMaxRange" val="250" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="250" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" />
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="250" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="4000" />
+				<set name="reactionMaxRange" val="3000" />
+				<set name="shortRange" val="350" />
+				<set name="criticalHp" val="30" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="0" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" />
+		</thinks>
+	</config>
+	<config name="EliteNoRandomWalk" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="250" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="0" />
+				<set name="randomWalkMaxRange" val="0" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="250" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" />
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="250" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="4000" />
+				<set name="reactionMaxRange" val="3000" />
+				<set name="shortRange" val="350" />
+				<set name="criticalHp" val="30" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="0" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" />
+		</thinks>
+	</config>
+	<config name="DefaultMonster" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="5000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="DefaultMinion" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="150" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="5000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="MonsterNoRandomWalk" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="0" />
+				<set name="randomWalkMaxRange" val="0" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="5000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="DefaultSocial" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+				<set name="maxMostHated" val="15" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="5000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="maxMostHated" val="15" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="Ranger" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="30" >
+				<set name="SHORT_ATTACK" val="40" />
+				<set name="TRAP" val="80" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="RangerNoRandomWalk" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="0" />
+				<set name="randomWalkMaxRange" val="0" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="30" >
+				<set name="SHORT_ATTACK" val="40" />
+				<set name="TRAP" val="80" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="Berserker" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="DefaultBattleTaskFactory" groupChance="0" >
+				<set name="SHORT_ATTACK" val="100" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+				<set name="SHIELD" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="Healer" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="50" />
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="HealBattleTaskFactory" groupChance="30" >
+				<set name="SHORT_ATTACK" val="40" />
+				<set name="HEAL" val="80" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+	<config name="HealerNoRandomWalk" >
+		<intervals default="1000" >
+			<interval state="WAIT" val="1000" />
+			<interval state="PATROL" val="4000" />
+			<interval state="RETURN_TO_HOME" val="1000" />
+			<interval state="IN_BATTLE" val="500" />
+			<interval state="IN_RAGE" val="250" />
+			<interval state="IN_RUN_AWAY" val="750" />
+		</intervals>
+		<tasks>
+			<task state="WAIT" factory="DefaultWaitTaskFactory" >
+				<set name="randomWalkMinRange" val="0" />
+				<set name="randomWalkMaxRange" val="0" />
+				<set name="randomWalkMinDelay" val="5000" />
+				<set name="randomWalkMaxDelay" val="25000" />
+				<set name="noticeRange" val="150" />
+			</task>
+			<task state="PATROL" factory="DefaultPatrolTaskFactory" />
+			<task state="RETURN_TO_HOME" factory="DefaultReturnTaskFactory" />
+			<task state="IN_BATTLE" factory="HealBattleTaskFactory" groupChance="30" >
+				<set name="SHORT_ATTACK" val="40" />
+				<set name="HEAL" val="80" />
+				<set name="LONG_ATTACK" val="100" />
+				<set name="JUMP" val="100" />
+			</task>
+			<task state="IN_RAGE" factory="DefaultRageTaskFactory" />
+			<task state="IN_RUN_AWAY" factory="DefaultRunAwayTaskFactory" >
+				<set name="offset" val="750" />
+			</task>
+		</tasks>
+		<thinks>
+			<think state="WAIT" action="DefaultWaitAction" >
+				<set name="randomWalkMaxRange" val="150" />
+				<set name="randomWalkMinDelay" val="30000" />
+				<set name="randomWalkMaxDelay" val="120000" />
+			</think>
+			<think state="PATROL" action="DefaultPatrolAction" />
+			<think state="RETURN_TO_HOME" action="DefaultReturnAction" >
+				<set name="distanceToSpawnLoc" val="40" />
+			</think>
+			<think state="IN_BATTLE" action="DefaultBattleAction" >
+				<set name="battleMaxRange" val="3000" />
+				<set name="reactionMaxRange" val="2000" />
+				<set name="criticalHp" val="20" />
+				<set name="rearRate" val="0" />
+				<set name="runAwayRate" val="500" />
+			</think>
+			<think state="IN_RAGE" action="DefaultRageAction" />
+			<think state="IN_RUN_AWAY" action="DefaultRunAwayAction" >
+				<set name="lastAttackedTime" val="60000" />
+				<set name="battleMaxRange" val="700" />
+			</think>
+		</thinks>
+	</config>
+</list>

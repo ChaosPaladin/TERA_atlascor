@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<package name="DefaultNoticeMessages" >
+		<msg text="Do not approach!" />
+		<msg text="Away from keyboard" />
+		<msg text="Dont touch me!" />
+		<msg text="Why are you so terrible?" />
+		<msg text="No no no no no! Back off I will not pull!" />
+		<msg text="What do you want from me!?" />
+		<msg text="I dont like you..." />
+		<msg text="Well, with such a weapon, and I want to tear someone..." />
+		<msg text="Busy!" />
+		<msg text="*crap*" />
+
+		<msg text="Why are you so small and weak?" />
+		<msg text="Can you see my fist? No? Well, come closer, look!" />
+		<msg text="Yes, I love you right now on the tail wound!" />
+		<msg text="Come on Come on, who is here with us?" />
+		<msg text=".....?" />
+		<msg text="Something I've never seen here before...." />
+		<msg text="What??" />
+		<msg text="Impossible!" />
+		<msg text="I wonder what you will drop?" />
+	</package>
+
+	<package name="DefaultUpdateNoticeMessages" >
+		<msg text="You're trying to trick me!?" />
+		<msg text="Im not scared!" />
+		<msg text="Ты думаешь я дурак!?" />
+		<msg text="You think I'm a fool!?" />
+		<msg text="You think I'm playing jokes to you!?" />
+		<msg text="Твоя попытка убить меня, ничтожна!" />
+		<msg text="Your attempt to kill me, is negligible" />
+		<msg text="Now you'll pay for it!" />
+		<msg text="I've been waiting for you!" />
+		<msg text="And what do you taste?" />
+		<msg text="I will gather all, and we will destroy you." />
+		<msg text="Сегодня ты станишь моим завтраком." />
+		<msg text="Today you have become my breakfast..." />
+		<msg text="For what... " />
+		<msg text="Taste my anger!" />
+		<msg text="Pleases in the back beat? It is not good..." />
+		<msg text="I faint!?" />
+		<msg text="No ... I do not want to die..." />
+		<msg text="Something you troubling me..." />
+		<msg text="You'll see, I'm not the last..." />
+		<msg text="Is that all you can do!??" />
+	</package>
+	
+	<package name="DefaultWalkMessages" >
+		<msg text="Once we get bored here..." />
+		<msg text="Wheres everybody?" />
+		<msg text="Какая хорошая погодка!" />
+		<msg text="Whats good with the weather?" />
+	</package>
+	
+	<package name="DefaultSwitchTargetMessages" >
+		<msg text="Now you got me!" />
+		<msg text="Go!" />
+		<msg text="How dare you!?" />
+		<msg text="I came first!" />
+	</package>
+	
+	<package name="DefaultJumpSideMessages" >
+		<msg text="You will not get!" />
+	</package>
+	
+	<package name="DefaultJumpBehindMessages" >
+		<msg text="Move away!" />
+	</package>
+	
+	<package name="DefaultShortAttackMessages" >
+		<msg text="Now you get!" />
+	</package>
+	
+	<package name="DefaultLongAttackMessages" >
+		<msg text="Receive!" />
+	</package>
+	
+	<package name="DefaultRunAwayMessages" >
+		<msg text="Dumps, posony, they cheat!" />
+		<msg text="Oh you..!" />
+		<msg text="Oops, I forgot to train at home." />
+		<msg text="SOS! SOS!" />
+		<msg text="Someone call Greenpeace!!" />
+		<msg text="Militia!" />
+		<msg text="My drop!!" />
+		<msg text="Catch!" />
+		<msg text="Oh, I have a stomach ache." />
+		<msg text="I have a headache." />
+		<msg text="Yes I am right now!" />
+		<msg text="Kill me! Kill !!" />
+		<msg text="Well, I do not play." />
+		<msg text="This time is not exact." />
+		<msg text="I am right now, quickly, buy a smoke around the corner and go back." />
+		<msg text="Fellowship, help out!" />
+		<msg text="Yes you are right now!" />
+		<msg text="And give better play catch-up." />
+		<msg text="You're sick!" />
+		<msg text="I am your home!!" />
+		<msg text="Urgent!!" />
+		<msg text="Ugh!, Got some." />
+		<msg text="I'm tired. I'm leaving." />
+		<msg text="Run through?" />
+		<msg text="Slush, cheating, and?" />
+		<msg text="Gold Report?!" />
+		<msg text="Everything! Tired! Tomorrow is fired!" />
+		<msg text="I did not sign it." />
+		<msg text="Oh yo!" />
+		<msg text=".....?" />
+		<msg text="....." />
+		<msg text="Yes, I gave you?" />
+		<msg text="That hurts!" />
+		<msg text="Yes, I'd better go." />
+		<msg text="*crap*" />
+		<msg text="They said, to meet new people, see the light. Yeah. other world!" />
+		<msg text="I have a family at home, kids! You think about them" />
+		<msg text="They do not catch up! They do not catch up!" />
+		<msg text="I do not want to die a virgin!" />
+		<msg text="Nooo!" />
+		<msg text="МАМА!" />
+		<msg text="And you said that here the players lag. Lie!." />
+		<msg text="No no no no!" />
+	</package>
+</list>
