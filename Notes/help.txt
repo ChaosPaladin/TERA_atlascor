@@ -1,0 +1,11 @@
+User Commands (Access Level: 0)
+         --event_reg
+         --restore_characters
+         --player_info
+         --help
+         --version
+         --end_pay
+         --time
+         --kill_me
+         --online
+         --restore_skills

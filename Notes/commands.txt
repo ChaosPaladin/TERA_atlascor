@@ -1,0 +1,106 @@
+Resource Commands (Access Level: 100)
+         --around_resourse
+         --spawn_resourse
+         --set_export_file
+         --add_resourse
+         --export_resourse
+
+Config Commands (Access Level: 100)
+         --config_reload
+         --config_set
+
+World Commands (Access Level: 100)
+         --loc
+         --region
+         --territory
+         --goto
+         --recall
+
+Skill Commands (Access Level: 100)
+         --start_skill
+         --add_skills
+         --learn_next_skills
+         --reload_skills
+         --clear_skills
+         --get_base_skills
+         --effect
+         --charm
+
+Heal Commands (Access Level: 100)
+         --set_hp
+         --set_mp
+         --heal
+
+Developer Commands (Access Level: 100)
+         --event_reg_all_players
+         --change_class
+         --kick
+         --check_geo
+         --send_event
+         --send_system
+         --send_state
+         --add_attack
+         --start_event
+         --sub_attack
+         --start_gc
+         --reload_dialogs
+         --send_packet
+         --set_access_level
+         --get_access_level
+         --set_heart
+         --set_level
+         --send_bytes
+         --send_file
+         --get_my_id
+         --invul
+         --set_ower_dist
+         --my_funcs
+         --save_point
+         --a
+         --save_all
+         --gm_speed
+
+Item Commands (Access Level:100)
+         --item_info
+         --create_item
+         --spawn_item
+         --reload_items
+
+Censore Commands (Access Level: 40)
+         --chat_ban
+         --chat_unban
+
+Summon Commands (Access Level: 100)
+         --reload_summons
+         --summon_cast
+         --around_summon_cast
+
+Quest Commands (Access Level: 100)
+         --quest_cond
+         --quest_state
+         --quest_cancel
+         --quest_remove
+         --quest_accept
+         --quest_movie
+         --quest_reload
+         --quest_start
+         --quest_info
+
+Var Commands (Access Level: 100)
+         --set_player_var
+         --get_player_var
+
+NPC Commands (Access Level: 100)
+         --go_to_npc
+         --send_dialog
+         --test_spawn
+         --stop_spawns
+         --start_spawns
+         --npc_cast
+         --around_npc_spawn
+         --around_npc
+         --reload_npcs
+         --reload_spawns
+         --spawn
+         --around_npc_cast
+         --around_npc_long_cast
