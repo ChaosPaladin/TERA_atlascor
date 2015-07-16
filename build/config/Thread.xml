@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="THREAD_POOL_SIZE_GENERAL" value="1" />
+	<set name="THREAD_POOL_SIZE_MOVE" value="1" />
+	<set name="THREAD_POOL_SIZE_AI" value="1" />
+	<set name="THREAD_POOL_PACKET_RUNNER" value="1" />
+	<set name="THREAD_POOL_SIZE_SKILL_USE" value="1" />
+	<set name="THREAD_POOL_SIZE_SKILL_CAST" value="1" />
+	<set name="THREAD_POOL_SIZE_SKILL_MOVE" value="1" />
+</list>    

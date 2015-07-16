@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="DIST_CONTROL_ENABLED" value="true" />
+	<set name="DIST_CONTROL_PORT" value="2105" />
+	<set name="DIST_CONTROL_CLIENT_INTERVAL" value="1000" />
+	<set name="DIST_CONTROL_LOGIN" value="root" />
+	<set name="DIST_CONTROL_PASSWORD" value="123456789" />
+</list>    

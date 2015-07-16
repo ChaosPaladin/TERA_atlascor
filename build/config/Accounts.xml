@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<!-- Minimum account access level that can login - Default 0 -->
+	<set name="ACCOUNT_MIN_ACCESS_LEVEL" value="0" />
+	
+	<!-- Default account exp rate - Default 1 -->
+	<set name="ACCOUNT_PREMIUM_EXP_RATE" value="2.0" />
+	<!-- Default account money rate - Default 1 -->
+	<set name="ACCOUNT_PREMIUM_MONEY_RATE" value="2.0" />
+	<!-- Default account drop rate - Default 1 -->
+	<set name="ACCOUNT_PREMIUM_DROP_RATE" value="2.0" />
+	<!-- Default account quest rate - Default 1 -->
+	<set name="ACCOUNT_PREMIUM_QUEST_RATE" value="2.0" />	
+	
+	
+	<set name="ACCOUNT_PREMIUM_QUEST" value="true" />
+	<set name="ACCOUNT_PREMIUM_EXP" value="true" />
+	<set name="ACCOUNT_PREMIUM_MONEY" value="true" />
+	<set name="ACCOUNT_PREMIUM_DROP" value="true" />
+	
+	<!-- Autocreate account? - Default false -->
+	<set name="ACCOUNT_AUTO_CREATE" value="true" />
+	
+	<!-- Only paid account can login - Default false -->
+	<set name="ACCOUNT_ONLY_PAID" value="false" />
+</list>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="DEVELOPER_DEBUG_CLIENT_PACKETS" value="false" />
+	<set name="DEVELOPER_DEBUG_SERVER_PACKETS" value="false" />
+	<set name="DEVELOPER_MAIN_DEBUG" value="false" />
+	<set name="DEVELOPER_DEBUG_TARGET_TYPE" value="false" />
+	<set name="DEVELOPER_DEBUG_CASTING_SKILL" value="false" />
+	<set name="DEVELOPER_DEBUG_MOVING_PLAYER" value="false" />
+	<set name="DEVELOPER_DEBUG_MOVING_NPC" value="false" />
+	<set name="DEVELOPER_GEO_LOGING" value="false" />	
+	<set name="DEVELOPER_FORCE_ATTACK_SPEED" value="0" />
+</list>

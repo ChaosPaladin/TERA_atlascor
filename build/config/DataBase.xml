@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="DATA_BASE_DRIVER" value="com.mysql.jdbc.Driver" />
+	<set name="DATA_BASE_URL" value="jdbc:mysql://localhost/teradb" />
+	<set name="DATA_BASE_LOGIN" value="root" />
+	<set name="DATA_BASE_PASSWORD" value="123456789" />
+	<set name="DATA_BASE_MAX_CONNECTIONS" value="10" />
+	<set name="DATA_BASE_MAX_STATEMENTS" value="1000" />
+	<set name="DATA_BASE_CLEANING_START" value="true" />
+</list>    

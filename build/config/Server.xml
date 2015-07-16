@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="SERVER_PORT" value="8090" />
+
+	<set name="SERVER_NAME_TEMPLATE" value="([0-9A-Za-z]{2,16})|([0-9\u0410-\u044f]{2,16})|([0-9А-Яа-я]{2,16})" />
+	
+	<set name="SERVER_RATE_EXP" value="3.0" />
+	<set name="SERVER_PARTY_RATE_EXP" value="6.0" />
+	<set name="SERVER_RATE_MONEY" value="3.0" />
+	<set name="SERVER_RATE_DROP_ITEM" value="3.0" />
+	<set name="SERVER_RATE_QUEST_REWARD" value="4.0" />
+	
+	<set name="SERVER_USE_SNIFFER_OPCODE" value="true" />
+	<set name="SERVER_DROP_REAL_RANDOM" value="true" />
+	<set name="SERVER_CRIT_REAL_RANDOM" value="false" />
+	<set name="SERVER_EFFECT_REAL_RANDOM" value="false" />
+	<set name="SERVER_FUNC_REAL_RANDOM" value="false" />
+	<set name="SERVER_DAMAGE_REAL_RANDOM" value="false" />
+	<set name="SERVER_OWERTURN_REAL_RANDOM" value="false" />
+	
+	<set name="SERVER_ONLINE_FAKE" value="2" />
+	<set name="SERVER_ONLINE_FILE" value="online.php" />
+	
+	<set name="SERVER_PLAYER_SUB_ID" value="1000" />
+	<set name="SERVER_NPC_SUB_ID" value="2000" />
+	<set name="SERVER_ITEM_SUB_ID" value="3000" />
+	<set name="SERVER_SHOT_SUB_ID" value="4000" />
+	<set name="SERVER_OBJECT_SUB_ID" value="5000" />
+	<set name="SERVER_TRAP_SUB_ID" value="6000" />
+	<set name="SERVER_RESOURSE_SUB_ID" value="7000" />
+</list>    

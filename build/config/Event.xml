@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="EVENT_MIN_TIMEOUT" value="30" />
+	<set name="EVENT_MAX_TIMEOUT" value="60" />
+	<set name="EVENT_TVT_REGISTER_TIME" value="5" />
+	<set name="EVENT_TVT_BATTLE_TIME" value="15" />
+	<set name="EVENT_TVT_MIN_PLAYERS" value="6" />
+	<set name="EVENT_TVT_MAX_PLAYERS" value="100" />
+	<set name="EVENT_TVT_MIN_LEVEL" value="1" />
+	<set name="EVENT_TVT_MAX_LEVEL" value="60" />
+	<set name="EVENT_LH_REGISTER_TIME" value="5" />
+	<set name="EVENT_LH_BATTLE_TIME" value="15" />
+	<set name="EVENT_LH_MIN_PLAYERS" value="10" />
+	<set name="EVENT_LH_MAX_PLAYERS" value="130" />
+	<set name="EVENT_LH_MIN_LEVEL" value="1" />
+	<set name="EVENT_LH_MAX_LEVEL" value="60" />
+	<set name="EVENT_TMT_REGISTER_TIME" value="5" />
+	<set name="EVENT_TMT_BATTLE_TIME" value="5" />
+	<set name="EVENT_TMT_MIN_TEAMS" value="4" />
+	<set name="EVENT_TMT_MAX_TEAMS" value="20" />
+	<set name="EVENT_TMT_MIN_TEAM_SIZE" value="2" />
+	<set name="EVENT_TMT_MAX_TEAM_SIZE" value="5" />
+	<set name="EVENT_TMT_MIN_LEVEL" value="1" />
+	<set name="EVENT_TMT_MAX_LEVEL" value="60" />
+	<set name="EVENT_EB_REGISTER_TIME" value="5" />
+	<set name="EVENT_EB_BATTLE_TIME" value="15" />
+	<set name="EVENT_EB_MIN_PLAYERS" value="1" />
+	<set name="EVENT_EB_MAX_PLAYERS" value="18" />
+	<set name="EVENT_EB_MIN_LEVEL" value="20" />
+	<set name="EVENT_EB_MAX_LEVEL" value="60" />
+	<set name="EVENT_TDM_REGISTER_TIME" value="3" />
+	<set name="EVENT_TDM_BATTLE_TIME" value="10" />
+	<set name="EVENT_TDM_MIN_PLAYERS" value="2" />
+	<set name="EVENT_TDM_MAX_PLAYERS" value="1000" />
+	<set name="EVENT_TDM_MIN_LEVEL" value="1" />
+	<set name="EVENT_TDM_MAX_LEVEL" value="60" />
+	<set name="EVENT_HERO_POINT_TO_GOLD" value="1000" />
+</list>    

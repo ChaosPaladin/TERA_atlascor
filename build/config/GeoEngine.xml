@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+	<set name="GEO_ENGINE_OFFSET_X" value="4000" />
+	<set name="GEO_ENGINE_OFFSET_Y" value="4000" />
+	<set name="GEO_ENGINE_QUARD_SIZE" value="64" />
+	<set name="GEO_ENGINE_QUARD_HEIGHT" value="300" />
+</list>
